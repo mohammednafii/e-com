@@ -9,7 +9,7 @@ import { Button } from "../../components/ui/button";
 
 const links = [
   { name: "Home", href: "/" },
-  { name: "Product", href: "/Product" },
+  { name: "Product", href: "/product" },
   { name: "Blog", href: "/Blog" },
   { name: "Contact", href: "/Contact" },
 ];
