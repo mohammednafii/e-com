@@ -1,6 +1,9 @@
+
 import { client,urlFor } from "@/lib/sanity";
 import Image from "next/image";
 import Link from "next/link";
+
+
 
 async function getData() {
     const query = `*[_type == 'heroImage'][0]`; 
@@ -20,6 +23,7 @@ export default async function Hero(){
             We sell only the most exclusive and high quality products for you.
             We are the best so come and shop with us.
           </p>
+          
 
           </div>
           
@@ -31,8 +35,8 @@ export default async function Hero(){
               alt="Great Photo"
               className="h-full w-full object-cover object-center"
               priority
-              width={500}
-              height={500}
+              width={450}
+              height={450}
             />
           </div>
 
@@ -74,3 +78,4 @@ export default async function Hero(){
     </section>
     );
 }
+
