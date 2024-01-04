@@ -15,6 +15,7 @@ export default function CartProvider({ children }: { children: ReactNode }) {
     language="en-US"
     >
         {children}
+        
 
     </USCProvider>);
 }

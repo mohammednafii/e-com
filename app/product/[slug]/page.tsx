@@ -3,6 +3,8 @@ import { fullProduct } from "@/app/interface";
 import { client } from "@/lib/sanity";
 import { Button } from "@/components/ui/button";
 import { Star, Truck } from "lucide-react";
+import AddToBag from "@/app/components/AddToBag";
+import Checkout from "@/app/components/Checkout";
 async function getData(slug: string) {
   const query = `*[_type == "product" && slug.current == "${slug}"][0] {
         _id,
@@ -71,14 +73,7 @@ export default async function ProductPage({ params }: { params: { slug: string }
               <span className="text-sm">2-4 Day Shipping</span>
             </div>
             <div className="flex gap-2.5">
-                <Button>add to bag</Button>
-                <Button variant={"secondary"}>checkout </Button>
-            </div>
-            <p className="mt-12 text-base text-gray-500 tracking-wide">
-              {data.description}
-            </p>
-            {/*}<div className="flex gap-2.5">
-              <AddToBag
+            <AddToBag
                 currency="USD"
                 description={data.description}
                 image={data.images[0]}
@@ -87,7 +82,7 @@ export default async function ProductPage({ params }: { params: { slug: string }
                 key={data._id}
                 price_id={data.price_id}
               />
-              <CheckoutNow
+              <Checkout
                 currency="USD"
                 description={data.description}
                 image={data.images[0]}
@@ -95,7 +90,12 @@ export default async function ProductPage({ params }: { params: { slug: string }
                 price={data.price}
                 key={data._id}
                 price_id={data.price_id}
-  />{*/}
+              />
+                
+            </div>
+            <p className="mt-12 text-base text-gray-500 tracking-wide">
+              {data.description}
+            </p>
             </div>
 
 
