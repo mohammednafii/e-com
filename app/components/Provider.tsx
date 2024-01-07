@@ -10,7 +10,7 @@ export default function CartProvider({ children }: { children: ReactNode }) {
     cancelUrl="http://localhost:3000/error"
     currency="USD"
     allowedCountries={['US', 'GB', 'CA']}
-    billingAddressCollection={true}
+    billingAddressCollection={false}
     shouldPersist={true}
     language="en-US"
     >
